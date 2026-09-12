@@ -10,3 +10,4 @@ test:
 # Run all action tests with the CI profile
 test-ci:
     cargo nextest run -P ci --locked -p base-action-harness --cargo-profile ci
+# Run action tests with output shown (useful when debugging a failing test)
