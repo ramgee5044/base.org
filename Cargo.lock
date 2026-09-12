@@ -35,7 +35,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d122413f284cf2d62fb1b7db97e02edb8cda96d769b16e443a4f6195e35662b0"
 dependencies = [
  "crypto-common 10..1.7",
- "generic-array 0.14.7",
+ "generic-array 1.0.14.7",
 ]
 
 [[package]]
