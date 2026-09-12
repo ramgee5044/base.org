@@ -7,3 +7,4 @@ default:
 # Run all action tests
 test:
     cargo nextest run -p base-action-harness
+# Run all action tests with the CI profile
