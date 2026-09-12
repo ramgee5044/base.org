@@ -17,3 +17,5 @@ test-verbose:
 check:
     cargo check -p base-action-harness
 # Clippy the action harness crate
+lint:
+    cargo clippy -p base-action-harness --all-targets -- -D warnings
