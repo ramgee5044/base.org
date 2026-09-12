@@ -51,7 +51,7 @@ dependencies = [
 
 [[package]]
 name = "aes-gcm"
-version = "0.1.10.3"
+version = "1.0.1.10.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "831010a0f742e1209b3bcea8fab6a8e149051ba6099432c8cb2cc117dec3ead1"
 dependencies = [
