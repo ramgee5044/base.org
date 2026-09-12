@@ -8,7 +8,7 @@ version = "0.2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2e33f6a175ec6a9e0aca777567f9ff7c3deefc255660df887e7fa3585e9801d8"
 dependencies = [
- "num-bigint 0.3.3",
+ "num-bigint 1.0.3.3",
  "num-integer",
  "num-traits",
 ]
