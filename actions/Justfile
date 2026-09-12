@@ -4,3 +4,4 @@
 # Default to display help menu
 default:
     @just --list --list-prefix '  actions::'
+# Run all action tests
