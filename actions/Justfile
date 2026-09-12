@@ -16,3 +16,4 @@ test-verbose:
 # Check the action harness crate without running tests
 check:
     cargo check -p base-action-harness
+# Clippy the action harness crate
