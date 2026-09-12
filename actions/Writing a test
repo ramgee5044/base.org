@@ -1,0 +1,23 @@
+use base_action_harness::{ActionTestHarness, Batcher, BatcherConfig};
+
+#[tokio::test]
+async fn example_action_test() {
+    let mut h = ActionTestHarness::default();
+    let batcher_cfg = BatcherConfig::default();
+
+    // Step 1: mine some L1 context.
+    h.mine_l1_blocks(3);
+    assert_eq!(h.l1.latest_number(), 3);
+
+    // Step 2: build real L2 blocks and batch them into one L1 block.
+    let source = h.create_l2_source(5).await;
+    let mut batcher = Batcher::new(source, &h.rollup_config, batcher_cfg);
+    batcher.advance(&mut h.l1).await;
+
+    // Step 3: inspect the signed L1 submissions.
+    assert!(h.l1.latest_number() >= 4);
+    assert!(
+        !h.l1.tip().transactions.is_empty() || !h.l1.tip().blob_sidecars.is_empty(),
+        "mined block should contain signed batcher submissions"
+    );
+}
