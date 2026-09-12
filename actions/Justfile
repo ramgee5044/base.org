@@ -13,3 +13,4 @@ test-ci:
 # Run action tests with output shown (useful when debugging a failing test)
 test-verbose:
     cargo nextest run -p base-action-harness --no-capture
+# Check the action harness crate without running tests
