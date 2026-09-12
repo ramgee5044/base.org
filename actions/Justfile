@@ -1,3 +1,4 @@
 # Recipes for the action test framework.
 # Import this module from the root Justfile with:
 #   mod actions 'actions'
+# Default to display help menu
