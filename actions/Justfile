@@ -14,3 +14,5 @@ test-ci:
 test-verbose:
     cargo nextest run -p base-action-harness --no-capture
 # Check the action harness crate without running tests
+check:
+    cargo check -p base-action-harness
