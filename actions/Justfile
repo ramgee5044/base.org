@@ -5,3 +5,5 @@
 default:
     @just --list --list-prefix '  actions::'
 # Run all action tests
+test:
+    cargo nextest run -p base-action-harness
