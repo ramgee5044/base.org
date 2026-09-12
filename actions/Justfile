@@ -8,3 +8,5 @@ default:
 test:
     cargo nextest run -p base-action-harness
 # Run all action tests with the CI profile
+test-ci:
+    cargo nextest run -P ci --locked -p base-action-harness --cargo-profile ci
